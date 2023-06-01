@@ -1,9 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"rsc.io/quote"
+)
 
 func main() {
 	fmt.Printf("1 + 2 = %v\n", sum(1, 2))
+	fmt.Println(quote.Hello())
 }
 
 func sum(a, b int) int {
