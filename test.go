@@ -3,6 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	fmt.print("Hello, sun")
-	fmt.println("I am Yong Sheng.")
+	fmt.print("Hello, ")
+	fmt.println("how are you?")
 }
