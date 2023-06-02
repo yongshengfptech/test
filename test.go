@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Printf("1 + 2 = %v\n", sum(1, 2))
+	fmt.Printf("1 + 2 = %v\n", Sum(1, 2))
 	fmt.Println(quote.Hello())
 }
 
