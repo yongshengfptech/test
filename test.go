@@ -11,6 +11,6 @@ func main() {
 	fmt.Println(quote.Hello())
 }
 
-func sum(a, b int) int {
+func Sum(a, b int) int {
 	return a + b
 }
