@@ -34,7 +34,7 @@ func RandomQuestion() question {
 
 func CheckAns(ans int, q question) string {
 	if ans == q.Ans {
-		return fmt.Sprintln("Correct Answer")
+		return fmt.Sprintln("\033[32mCorrect Answer\033[0m")
 	}
-	return fmt.Sprintln("Wrong Answer")
+	return fmt.Sprintln("\033[31mWrong Answer\033[0m")
 }

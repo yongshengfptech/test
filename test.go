@@ -25,7 +25,7 @@ func QandA() {
 		}
 		fmt.Printf("%s\n", mathQuestion.CheckAns(ans, q))
 	} else {
-		fmt.Printf("Not a number\n\n")
+		fmt.Printf("\033[31mNot a number\033[0m\n\n")
 	}
 	QandA()
 }
