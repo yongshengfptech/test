@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"project/test/mathQuestion"
+	"strconv"
 )
 
 func main() {
@@ -14,8 +15,10 @@ func QandA() {
 	fmt.Println("Enter -1 to exit.")
 	fmt.Printf("%v %c %v = ", q.Num1, q.Operator, q.Num2)
 
-	var ans int
-	_, err := fmt.Scanf("%d\n", &ans)
+	var ansString string
+	fmt.Scanln(&ansString)
+
+	ans, err := strconv.Atoi(ansString)
 	if err == nil {
 		if ans == -1 {
 			return
