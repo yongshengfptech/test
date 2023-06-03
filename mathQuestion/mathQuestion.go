@@ -13,8 +13,8 @@ type question struct {
 }
 
 func RandomQuestion() question {
-	num1 := rand.Intn(20)
-	num2 := rand.Intn(20)
+	num1 := rand.Intn(50)
+	num2 := rand.Intn(50)
 
 	operators := []rune{'+', '-'}
 	operator := operators[rand.Intn(len(operators))]
