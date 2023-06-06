@@ -5,6 +5,12 @@ go 1.20
 replace project/test/mathQuestion => /mathQuestion
 
 require (
+	github.com/gin-gonic/gin v1.9.1
+	project/test/mathQuestion v0.0.0-00010101000000-000000000000
+	rsc.io/quote v1.5.2
+)
+
+require (
 	github.com/bytedance/sonic v1.9.1 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect
@@ -30,10 +36,4 @@ require (
 	google.golang.org/protobuf v1.30.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	rsc.io/sampler v1.3.0 // indirect
-)
-
-require (
-	github.com/gin-gonic/gin v1.9.1
-	project/test/mathQuestion v0.0.0-00010101000000-000000000000
-	rsc.io/quote v1.5.2
 )
