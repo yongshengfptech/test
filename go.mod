@@ -2,6 +2,8 @@ module project/test
 
 go 1.20
 
+replace project/test/mathQuestion => /mathQuestion
+
 require (
 	github.com/bytedance/sonic v1.9.1 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
@@ -27,8 +29,11 @@ require (
 	golang.org/x/text v0.9.0 // indirect
 	google.golang.org/protobuf v1.30.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+	rsc.io/sampler v1.3.0 // indirect
 )
 
-replace project/test/mathQuestion => /mathQuestion
-
-require github.com/gin-gonic/gin v1.9.1
+require (
+	github.com/gin-gonic/gin v1.9.1
+	project/test/mathQuestion v0.0.0-00010101000000-000000000000
+	rsc.io/quote v1.5.2
+)
