@@ -1,10 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"strconv"
 
-	"fmt"
 	"project/test/mathQuestion"
 
 	"github.com/gin-gonic/gin"
