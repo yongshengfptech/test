@@ -4,6 +4,9 @@ import (
 	"net/http"
 	"strconv"
 
+	"fmt"
+	"project/test/mathQuestion"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -56,13 +59,7 @@ func postSales(c *gin.Context) {
 
 	vehicleSales = append(vehicleSales, newSales)
 	c.IndentedJSON(http.StatusCreated, newSales)
-	"fmt"
-	"project/test/mathQuestion"
-	"strconv"
-}
 
-func main() {
-	QandA()
 }
 
 func QandA() {
