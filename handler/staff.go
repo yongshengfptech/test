@@ -2,6 +2,7 @@ package handler
 
 import (
 	"api_test/database"
+	"api_test/logger"
 	"api_test/model"
 	"api_test/response"
 	"time"
@@ -19,6 +20,7 @@ func CreateStaff(ctx *fiber.Ctx) error {
 
 	var request_body *IncomingStaff
 	if err := ctx.BodyParser(&request_body); err != nil {
+		logger.Log.Error(err.Error())
 		return ctx.Status(fiber.StatusBadRequest).JSON(response.Json_msg("error", "fail to get request"))
 	}
 
