@@ -20,6 +20,7 @@ func CreateStaff(ctx *fiber.Ctx) error {
 
 	var request_body *IncomingStaff
 	if err := ctx.BodyParser(&request_body); err != nil {
+		logger.Log.Error("fail to get request")
 		return ctx.Status(fiber.StatusBadRequest).JSON(response.Json_msg("error", "fail to get request"))
 	}
 
