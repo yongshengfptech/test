@@ -20,7 +20,6 @@ func CreateStaff(ctx *fiber.Ctx) error {
 
 	var request_body *IncomingStaff
 	if err := ctx.BodyParser(&request_body); err != nil {
-		logger.Log.Error(err.Error())
 		return ctx.Status(fiber.StatusBadRequest).JSON(response.Json_msg("error", "fail to get request"))
 	}
 
@@ -34,9 +33,10 @@ func CreateStaff(ctx *fiber.Ctx) error {
 
 	err := db.Create(staff_data).Error
 	if err != nil {
-		logger.Log.Info(err.Error())
+		logger.Log.Error(err.Error())
 		return ctx.Status(fiber.StatusBadRequest).JSON(response.Json_msg("error", "fail to create data"))
 	}
 
+	logger.Log.Info("create succeed")
 	return ctx.Status(fiber.StatusOK).JSON(response.Json_msg("success", "create succeed "+request_body.Staff_name))
 }
