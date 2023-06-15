@@ -34,6 +34,7 @@ func CreateStaff(ctx *fiber.Ctx) error {
 
 	err := db.Create(staff_data).Error
 	if err != nil {
+		logger.Log.Info(err.Error())
 		return ctx.Status(fiber.StatusBadRequest).JSON(response.Json_msg("error", "fail to create data"))
 	}
 
