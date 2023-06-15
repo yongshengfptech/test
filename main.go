@@ -3,6 +3,7 @@ package main
 import (
 	"api_test/config"
 	"api_test/database"
+	"api_test/logger"
 	"api_test/router"
 	"fmt"
 
@@ -22,6 +23,8 @@ func main() {
 	}))
 
 	// setup log
+	logger.Initialize("develop", "cbs.log")
+	logger.Log.Info("Initialized logger")
 
 	// setup config and db
 	config.Load_env()
